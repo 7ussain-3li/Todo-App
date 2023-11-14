@@ -1,14 +1,12 @@
 import "./taskCard.css"
 
-const TaskCard = () => {
+const TaskCard = ({ text, handleDelete }) => {
     return (
-        <div>
-            <div className="todo-item">
-                <p>Hello this is my first Todo.</p>
-                <button>X</button>
-            </div>
+        <div className="todo-item">
+            <p>{text}</p>
+            <button onClick={handleDelete}>X</button>
         </div>
-    )
-}
+    );
+};
 
 export default TaskCard;
